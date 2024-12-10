@@ -1,0 +1,149 @@
+@import url("https://fonts.cdnfonts.com/css/devil-breeze");
+@import url("https://fonts.cdnfonts.com/css/poppins");
+@import url("https://fonts.cdnfonts.com/css/bimbo");
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  background: linear-gradient(#132230, #000b10);
+  color: #eef8ce;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+}
+
+*::-webkit-scrollbar {
+  width: 0;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+.image {
+  z-index: 120;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  left: 0;
+  top: 0;
+  bottom:0;
+  right: 0;
+  background: url("img/bgocean.jpg") no-repeat center;
+  background-size: cover;
+  filter: opacity(0.2);
+}
+
+.section {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-fit {
+  width: min(1200px, 90vw);
+  margin: auto;
+  min-height: 100vh;
+  position: relative;
+  padding-block: 10em;
+}
+
+#banner .title {
+  color: #7dceed;
+  font-size: 11em;
+  font-family: "devil breeze";
+  font-weight: bold;
+  position: relative;
+  text-align: center;
+}
+#banner .title::before {
+  content: attr(data-before);
+  position: absolute;
+  top: 0.5em;
+  inset: 0.66em 0 0 0;
+  z-index: -1;
+  color: #222e50;
+}
+.section .decorate {
+  position: absolute;
+  filter: blur(3px) saturate(1) brightness(0.6);
+}
+#intro .content-fit {
+  display: flex;
+  gap: 30%;
+  justify-content: space-between;
+  align-items: center;
+}
+.section .number {
+  font-family: "devil breeze";
+  font-size: 15em;
+  font-weight: bold;
+}
+.section .content-fit .title {
+  font-family: "devil breeze";
+  font-size: 5em;
+  font-weight: bold;
+}
+#description .content-fit {
+  padding-right: 30%;
+}
+#description .number {
+  font-size: 5em;
+}
+#description .title {
+  font-size: 7em;
+  font-weight: 500;
+}
+
+#container3D {
+  position: fixed;
+  inset: 0;
+  /* background-color: red; */
+  z-index: 100;
+  pointer-events: none;
+  filter: blur(2px);
+}
+@media screen and (max-width: 1023px) {
+  #banner .title {
+    font-size: 5em;
+  }
+  #intro .content-fit {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 767px) {
+  #banner .title {
+    font-size: 3em;
+  }
+  #intro .content-fit {
+    flex-direction: column;
+  }
+  .section .number {
+    font-size: 5em;
+  }
+  .section .content-fit .title {
+    font-size: 2em;
+  }
+  #description .content-fit {
+    padding-right: 0;
+  }
+  #contact table {
+    font-size: 1em;
+  }
+  #contact .sign {
+    font-size: 2em;
+  }
+  #container3D {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    pointer-events: none;
+  }
+}
